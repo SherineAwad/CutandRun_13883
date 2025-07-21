@@ -1,0 +1,20 @@
+#---------------------------------------------------
+#General Parameters 
+#---------------------------------------------------
+#---------------------------------------------------
+SAMPLES: "human_samples.tsv"
+CONTROL: "control.tsv"
+TREAT: "treat.tsv"
+FINAL: "groups.tsv"
+MEMORY: "-Xmx20g" #for 20giga, change as much giga as you have 
+CORES: 8
+#------------------------------------------------------------------
+#Change this set of parameters if you wish to run at Genome level 
+#------------------------------------------------------------------
+GENOME: "/nfs/turbo/umms-thahoang/sherine/REFERENCES/Homo_sapiens/UCSC/hg38/Sequence/Bowtie2Index/WholeGenomeFasta/genome.fa"
+GTF: "/nfs/turbo/umms-thahoang/sherine/REFERENCES/Homo_sapiens/UCSC/hg38/Annotation/Genes/genes.gtf"
+INDEX: "/nfs/turbo/umms-thahoang/sherine/REFERENCES/Homo_sapiens/UCSC/hg38/Sequence/Bowtie2Index/genome"
+VERSION: h38
+Num_Processors: 4
+BINSIZE: 1
+Genome_Size:  XX2864785220 
