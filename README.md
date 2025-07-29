@@ -105,4 +105,16 @@
 [Mouse Bigwigs](https://drive.google.com/drive/folders/1TiBdr9aFB04SVOK9-DrjWoCVcJc2R7AF?usp=sharing)
 
 
+## Download NarrowPeaks files 
+
+### Human 
+
+[Human NarrowPeaks](https://drive.google.com/drive/folders/1enLta9ZjS7wrbcyu0DsXbZVGQq9IF8Mi?usp=sharing)
+
+### Mouse 
+
+[Mouse NarrowPeaks](https://drive.google.com/drive/folders/1uz9QafC9_wRZgljGSDylN_jJuyxF1wY2?usp=sharing) 
+
+
+
 
