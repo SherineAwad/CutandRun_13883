@@ -92,3 +92,17 @@
     31281654 (32.21%) aligned concordantly >1 times
 92.02% overall alignment rate
 ```
+
+
+## Download Bigwig files 
+
+### Human 
+
+[Human Bigwig](https://drive.google.com/drive/folders/1JArEGTfjdzSJjj7sEF-VafM8TI2ozoZZ?usp=sharing) 
+
+### Mouse 
+
+[Mouse Bigwigs](https://drive.google.com/drive/folders/1TiBdr9aFB04SVOK9-DrjWoCVcJc2R7AF?usp=sharing)
+
+
+
