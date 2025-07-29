@@ -6,7 +6,7 @@ CONTROL: "control.tsv"
 TREAT: "treat.tsv" 
 FINAL: "groups.tsv"
 MEMORY: "-Xmx20g" #for 20giga, change as much giga as you have 
-CORES: 8
+CORES: 5
 #------------------------------------------------------------------
 #Change this set of parameters if you wish to run at Genome level 
 #------------------------------------------------------------------
@@ -15,4 +15,5 @@ GTF: "../REFERENCES/Mus_musculus/Ensembl/GRCm38/Annotation/Genes/genes.gtf"
 INDEX: "../REFERENCES/Mus_musculus/Ensembl/GRCm38/Sequence/Bowtie2Index/genome" 
 Num_Processors: 4
 BINSIZE: 1
-Genome_Size: XX2864785220 
+Genome_Size: 2652783500
+ORGANISM: mm

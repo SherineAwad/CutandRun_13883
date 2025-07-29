@@ -9,13 +9,11 @@ rule all:
             expand("galore/{sample}_R2_001_val_2.fq.gz", sample = samples),
             expand("{sample}.sam", sample = samples),
             expand("{sample}.bam", sample = samples), 
-            #expand("{sample}.bam", sample =samples),
-            #expand("{sample}.sorted.bam", sample =samples),
-            #expand("{sample}.sorted.rmDup.bam", sample =samples),
-            #expand("{sample}.bigwig", sample = samples),
-            
-            #expand("macs/{sample}_summits.bed", sample = samples),
-            #expand("macs/{sample}_peaks.narrowPeak", sample = samples),
+            expand("{sample}.sorted.bam", sample =samples),
+            expand("{sample}.sorted.rmDup.bam", sample =samples),
+            expand("{sample}.bigwig", sample = samples),
+            expand("macs2/{sample}_peaks.narrowPeak",sample = samples),
+            expand("macs2/{sample}_summits.bed", sample =samples),
             #expand("Motif_{sample}/seq.autonorm.tsv", sample = samples),           
             #expand("{sample}.annotatednarrowpeaks", sample = samples),
             #expand("{sample}.annotatednarrowpeaks.stats", sample = samples),
@@ -119,19 +117,20 @@ rule bamCoverage:
           bamCoverage -b {input[0]} -p {params.num_processors}  --normalizeUsing RPGC --effectiveGenomeSize {params.genome_size} --binSize {params.binsize} -o {output} 
           """ 
 
-rule macs_bed: 
-      input: 
-         "{sample}.sorted.rmDup.bam"
-      params: 
-         "{sample}", 
-         genome_size = config['Genome_Size'] 
-      output: 
-          "macs/{sample}_summits.bed",
-          "macs/{sample}_peaks.narrowPeak", 
-      shell: 
-           """
-           bash macs2.sh 
-           """
+#Note --nolambda
+rule macs2:
+    input:
+        lambda wildcards: f"{wildcards.sample}.sorted.rmDup.bam"
+    output:
+        "macs2/{sample}_peaks.narrowPeak",
+        "macs2/{sample}_summits.bed"
+    params:
+        outdir = "macs2",
+        organism = config['ORGANISM'] 
+    shell:
+        """
+        macs2 callpeak -t {input} -f BAMPE -g {params.organism} --outdir {params.outdir} -n {wildcards.sample}
+        """
 
 
 rule annotateNarrowPeaks: 

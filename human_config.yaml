@@ -7,7 +7,7 @@ CONTROL: "control.tsv"
 TREAT: "treat.tsv"
 FINAL: "groups.tsv"
 MEMORY: "-Xmx20g" #for 20giga, change as much giga as you have 
-CORES: 8
+CORES: 3
 #------------------------------------------------------------------
 #Change this set of parameters if you wish to run at Genome level 
 #------------------------------------------------------------------
@@ -17,4 +17,5 @@ INDEX: "/nfs/turbo/umms-thahoang/sherine/REFERENCES/Homo_sapiens/UCSC/hg38/Seque
 VERSION: h38
 Num_Processors: 4
 BINSIZE: 1
-Genome_Size:  XX2864785220 
+Genome_Size: 2913022398
+ORGANISM: hs 
