@@ -93,7 +93,7 @@
 92.02% overall alignment rate
 ```
 
-## Summary of States 
+## Summary of Stats 
 
 | File ID         | Peak Count | Total Reads | Overall Alignment Rate  |
 |-----------------|------------|-------------|-------------------------|
